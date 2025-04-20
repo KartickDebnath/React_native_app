@@ -123,13 +123,21 @@ function AddNewInterview() {
                   <div className='my-3'>
                     <label>Years of experience</label>
                     <Input
-                      placeholder='5'
+                      placeholder='0'
                       type='number'
+                      min='0'
                       max='50'
                       required
-                      onChange={(event) => setJobExperience(event.target.value)}
+                      value={jobExperience}
+                      onChange={(event) => {
+                        const value = parseInt(event.target.value, 10);
+                        if (value >= 0 || event.target.value === '') {
+                          setJobExperience(event.target.value);
+                        }
+                      }}
                       className='mt-3'
                     />
+
                   </div>
                 </div>
 

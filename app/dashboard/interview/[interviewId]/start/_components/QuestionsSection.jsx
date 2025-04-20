@@ -50,6 +50,8 @@
 // }
 
 // export default QuestionsSection;
+
+//******* */
 import { Lightbulb, Volume2, VolumeX } from 'lucide-react';
 import React, { useState } from 'react';
 
@@ -126,3 +128,7 @@ function QuestionsSection({ mockInterviewQuestions, activeQuestionIndex }) {
 }
 
 export default QuestionsSection;
+
+
+
+
